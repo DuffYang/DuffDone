@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041C352E1DDE15F3000B8436 /* DDTravelEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C352D1DDE15F3000B8436 /* DDTravelEditViewController.m */; };
+		0438DE771DDCE34D0098D21A /* FZLTHJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0438DE751DDCE34D0098D21A /* FZLTHJW.TTF */; };
+		0438DE781DDCE34D0098D21A /* FZLTXHJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0438DE761DDCE34D0098D21A /* FZLTXHJW.TTF */; };
+		0438DE7B1DDCE35B0098D21A /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438DE7A1DDCE35B0098D21A /* UIFont+CustomFont.m */; };
+		7FA7A6821DD9F32900895D6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6811DD9F32900895D6C /* main.m */; };
+		7FA7A6851DD9F32900895D6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6841DD9F32900895D6C /* AppDelegate.m */; };
+		7FA7A6881DD9F32900895D6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6871DD9F32900895D6C /* ViewController.m */; };
+		7FA7A68B1DD9F32900895D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA7A6891DD9F32900895D6C /* Main.storyboard */; };
+		7FA7A68D1DD9F32900895D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA7A68C1DD9F32900895D6C /* Assets.xcassets */; };
+		7FA7A6901DD9F32900895D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA7A68E1DD9F32900895D6C /* LaunchScreen.storyboard */; };
+		7FA7A6991DD9F35500895D6C /* DDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6981DD9F35500895D6C /* DDHomeViewController.m */; };
+		7FA7A69C1DDAB39400895D6C /* UIColor+OFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A69B1DDAB39400895D6C /* UIColor+OFColor.m */; };
+		7FA7A69F1DDAB41E00895D6C /* DDTravelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A69E1DDAB41E00895D6C /* DDTravelListViewController.m */; };
+		7FA7A6A21DDAB49700895D6C /* UIViewController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6A11DDAB49700895D6C /* UIViewController+Custom.m */; };
+		7FA7A6A51DDAB55100895D6C /* UIColor+RGBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6A41DDAB55100895D6C /* UIColor+RGBColor.m */; };
+		7FA7A6A81DDAB56C00895D6C /* UIButton+OFHover.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6A71DDAB56C00895D6C /* UIButton+OFHover.m */; };
+		7FA7A6AB1DDAB80100895D6C /* DDTravelListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6AA1DDAB80100895D6C /* DDTravelListCell.m */; };
+		7FA7A6AE1DDAB81700895D6C /* DDTravelListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6AD1DDAB81700895D6C /* DDTravelListModel.m */; };
+		7FA7A6B11DDABDF800895D6C /* DDTravelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6B01DDABDF800895D6C /* DDTravelDetailViewController.m */; };
+		9A50026C66DE028D8BFD16B6 /* Pods_DDTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46D0AA524E10F6A94722285 /* Pods_DDTravel.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		041C352C1DDE15F3000B8436 /* DDTravelEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTravelEditViewController.h; sourceTree = "<group>"; };
+		041C352D1DDE15F3000B8436 /* DDTravelEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTravelEditViewController.m; sourceTree = "<group>"; };
+		0438DE751DDCE34D0098D21A /* FZLTHJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZLTHJW.TTF; sourceTree = "<group>"; };
+		0438DE761DDCE34D0098D21A /* FZLTXHJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZLTXHJW.TTF; sourceTree = "<group>"; };
+		0438DE791DDCE35B0098D21A /* UIFont+CustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CustomFont.h"; sourceTree = "<group>"; };
+		0438DE7A1DDCE35B0098D21A /* UIFont+CustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CustomFont.m"; sourceTree = "<group>"; };
+		7FA7A67D1DD9F32900895D6C /* DDTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FA7A6811DD9F32900895D6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7FA7A6831DD9F32900895D6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7FA7A6841DD9F32900895D6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7FA7A6861DD9F32900895D6C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7FA7A6871DD9F32900895D6C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7FA7A68A1DD9F32900895D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7FA7A68C1DD9F32900895D6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FA7A68F1DD9F32900895D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7FA7A6911DD9F32900895D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FA7A6971DD9F35500895D6C /* DDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHomeViewController.h; sourceTree = "<group>"; };
+		7FA7A6981DD9F35500895D6C /* DDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHomeViewController.m; sourceTree = "<group>"; };
+		7FA7A69A1DDAB39400895D6C /* UIColor+OFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+OFColor.h"; sourceTree = "<group>"; };
+		7FA7A69B1DDAB39400895D6C /* UIColor+OFColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OFColor.m"; sourceTree = "<group>"; };
+		7FA7A69D1DDAB41E00895D6C /* DDTravelListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTravelListViewController.h; sourceTree = "<group>"; };
+		7FA7A69E1DDAB41E00895D6C /* DDTravelListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTravelListViewController.m; sourceTree = "<group>"; };
+		7FA7A6A01DDAB49700895D6C /* UIViewController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Custom.h"; sourceTree = "<group>"; };
+		7FA7A6A11DDAB49700895D6C /* UIViewController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Custom.m"; sourceTree = "<group>"; };
+		7FA7A6A31DDAB55100895D6C /* UIColor+RGBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBColor.h"; sourceTree = "<group>"; };
+		7FA7A6A41DDAB55100895D6C /* UIColor+RGBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBColor.m"; sourceTree = "<group>"; };
+		7FA7A6A61DDAB56C00895D6C /* UIButton+OFHover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+OFHover.h"; sourceTree = "<group>"; };
+		7FA7A6A71DDAB56C00895D6C /* UIButton+OFHover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+OFHover.m"; sourceTree = "<group>"; };
+		7FA7A6A91DDAB80100895D6C /* DDTravelListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTravelListCell.h; sourceTree = "<group>"; };
+		7FA7A6AA1DDAB80100895D6C /* DDTravelListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTravelListCell.m; sourceTree = "<group>"; };
+		7FA7A6AC1DDAB81700895D6C /* DDTravelListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTravelListModel.h; sourceTree = "<group>"; };
+		7FA7A6AD1DDAB81700895D6C /* DDTravelListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTravelListModel.m; sourceTree = "<group>"; };
+		7FA7A6AF1DDABDF800895D6C /* DDTravelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTravelDetailViewController.h; sourceTree = "<group>"; };
+		7FA7A6B01DDABDF800895D6C /* DDTravelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTravelDetailViewController.m; sourceTree = "<group>"; };
+		A83350F30942AB8B244ED36B /* Pods-DDTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTravel.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDTravel/Pods-DDTravel.release.xcconfig"; sourceTree = "<group>"; };
+		E456F8D4BFB966AF76FECB39 /* Pods-DDTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTravel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDTravel/Pods-DDTravel.debug.xcconfig"; sourceTree = "<group>"; };
+		F46D0AA524E10F6A94722285 /* Pods_DDTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FA7A67A1DD9F32900895D6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A50026C66DE028D8BFD16B6 /* Pods_DDTravel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		293271C78C01BC0641DA80C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F46D0AA524E10F6A94722285 /* Pods_DDTravel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FA7A6741DD9F32900895D6C = {
+			isa = PBXGroup;
+			children = (
+				7FA7A67F1DD9F32900895D6C /* DDTravel */,
+				7FA7A67E1DD9F32900895D6C /* Products */,
+				BAD31E7B2FBCE8152FC10629 /* Pods */,
+				293271C78C01BC0641DA80C3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7FA7A67E1DD9F32900895D6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FA7A67D1DD9F32900895D6C /* DDTravel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FA7A67F1DD9F32900895D6C /* DDTravel */ = {
+			isa = PBXGroup;
+			children = (
+				0438DE791DDCE35B0098D21A /* UIFont+CustomFont.h */,
+				0438DE7A1DDCE35B0098D21A /* UIFont+CustomFont.m */,
+				7FA7A6A61DDAB56C00895D6C /* UIButton+OFHover.h */,
+				7FA7A6A71DDAB56C00895D6C /* UIButton+OFHover.m */,
+				7FA7A69A1DDAB39400895D6C /* UIColor+OFColor.h */,
+				7FA7A69B1DDAB39400895D6C /* UIColor+OFColor.m */,
+				7FA7A6A31DDAB55100895D6C /* UIColor+RGBColor.h */,
+				7FA7A6A41DDAB55100895D6C /* UIColor+RGBColor.m */,
+				7FA7A6831DD9F32900895D6C /* AppDelegate.h */,
+				7FA7A6841DD9F32900895D6C /* AppDelegate.m */,
+				7FA7A6861DD9F32900895D6C /* ViewController.h */,
+				7FA7A6871DD9F32900895D6C /* ViewController.m */,
+				7FA7A6891DD9F32900895D6C /* Main.storyboard */,
+				7FA7A68C1DD9F32900895D6C /* Assets.xcassets */,
+				7FA7A68E1DD9F32900895D6C /* LaunchScreen.storyboard */,
+				7FA7A6911DD9F32900895D6C /* Info.plist */,
+				7FA7A6801DD9F32900895D6C /* Supporting Files */,
+				7FA7A6971DD9F35500895D6C /* DDHomeViewController.h */,
+				7FA7A6981DD9F35500895D6C /* DDHomeViewController.m */,
+				7FA7A69D1DDAB41E00895D6C /* DDTravelListViewController.h */,
+				7FA7A69E1DDAB41E00895D6C /* DDTravelListViewController.m */,
+				7FA7A6A01DDAB49700895D6C /* UIViewController+Custom.h */,
+				7FA7A6A11DDAB49700895D6C /* UIViewController+Custom.m */,
+				7FA7A6A91DDAB80100895D6C /* DDTravelListCell.h */,
+				7FA7A6AA1DDAB80100895D6C /* DDTravelListCell.m */,
+				7FA7A6AC1DDAB81700895D6C /* DDTravelListModel.h */,
+				7FA7A6AD1DDAB81700895D6C /* DDTravelListModel.m */,
+				7FA7A6AF1DDABDF800895D6C /* DDTravelDetailViewController.h */,
+				7FA7A6B01DDABDF800895D6C /* DDTravelDetailViewController.m */,
+				041C352C1DDE15F3000B8436 /* DDTravelEditViewController.h */,
+				041C352D1DDE15F3000B8436 /* DDTravelEditViewController.m */,
+			);
+			path = DDTravel;
+			sourceTree = "<group>";
+		};
+		7FA7A6801DD9F32900895D6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0438DE751DDCE34D0098D21A /* FZLTHJW.TTF */,
+				0438DE761DDCE34D0098D21A /* FZLTXHJW.TTF */,
+				7FA7A6811DD9F32900895D6C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAD31E7B2FBCE8152FC10629 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E456F8D4BFB966AF76FECB39 /* Pods-DDTravel.debug.xcconfig */,
+				A83350F30942AB8B244ED36B /* Pods-DDTravel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FA7A67C1DD9F32900895D6C /* DDTravel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FA7A6941DD9F32900895D6C /* Build configuration list for PBXNativeTarget "DDTravel" */;
+			buildPhases = (
+				61179FC7C2865BB8E6414D26 /* [CP] Check Pods Manifest.lock */,
+				7FA7A6791DD9F32900895D6C /* Sources */,
+				7FA7A67A1DD9F32900895D6C /* Frameworks */,
+				7FA7A67B1DD9F32900895D6C /* Resources */,
+				BC933400EA594769AA892F2B /* [CP] Embed Pods Frameworks */,
+				C9F6EA6780D29E2724293403 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDTravel;
+			productName = DDTravel;
+			productReference = 7FA7A67D1DD9F32900895D6C /* DDTravel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7FA7A6751DD9F32900895D6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = dongzheng;
+				TargetAttributes = {
+					7FA7A67C1DD9F32900895D6C = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = H49JVMRYS4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7FA7A6781DD9F32900895D6C /* Build configuration list for PBXProject "DDTravel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7FA7A6741DD9F32900895D6C;
+			productRefGroup = 7FA7A67E1DD9F32900895D6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FA7A67C1DD9F32900895D6C /* DDTravel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7FA7A67B1DD9F32900895D6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0438DE771DDCE34D0098D21A /* FZLTHJW.TTF in Resources */,
+				7FA7A6901DD9F32900895D6C /* LaunchScreen.storyboard in Resources */,
+				7FA7A68D1DD9F32900895D6C /* Assets.xcassets in Resources */,
+				7FA7A68B1DD9F32900895D6C /* Main.storyboard in Resources */,
+				0438DE781DDCE34D0098D21A /* FZLTXHJW.TTF in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61179FC7C2865BB8E6414D26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC933400EA594769AA892F2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DDTravel/Pods-DDTravel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9F6EA6780D29E2724293403 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DDTravel/Pods-DDTravel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FA7A6791DD9F32900895D6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041C352E1DDE15F3000B8436 /* DDTravelEditViewController.m in Sources */,
+				7FA7A69F1DDAB41E00895D6C /* DDTravelListViewController.m in Sources */,
+				7FA7A6AE1DDAB81700895D6C /* DDTravelListModel.m in Sources */,
+				7FA7A6881DD9F32900895D6C /* ViewController.m in Sources */,
+				7FA7A6991DD9F35500895D6C /* DDHomeViewController.m in Sources */,
+				7FA7A6AB1DDAB80100895D6C /* DDTravelListCell.m in Sources */,
+				7FA7A6851DD9F32900895D6C /* AppDelegate.m in Sources */,
+				7FA7A6A81DDAB56C00895D6C /* UIButton+OFHover.m in Sources */,
+				7FA7A6A21DDAB49700895D6C /* UIViewController+Custom.m in Sources */,
+				7FA7A6821DD9F32900895D6C /* main.m in Sources */,
+				7FA7A6B11DDABDF800895D6C /* DDTravelDetailViewController.m in Sources */,
+				7FA7A69C1DDAB39400895D6C /* UIColor+OFColor.m in Sources */,
+				0438DE7B1DDCE35B0098D21A /* UIFont+CustomFont.m in Sources */,
+				7FA7A6A51DDAB55100895D6C /* UIColor+RGBColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7FA7A6891DD9F32900895D6C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FA7A68A1DD9F32900895D6C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7FA7A68E1DD9F32900895D6C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FA7A68F1DD9F32900895D6C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7FA7A6921DD9F32900895D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7FA7A6931DD9F32900895D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FA7A6951DD9F32900895D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E456F8D4BFB966AF76FECB39 /* Pods-DDTravel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = H49JVMRYS4;
+				INFOPLIST_FILE = DDTravel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongzheng.DDTravel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7FA7A6961DD9F32900895D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A83350F30942AB8B244ED36B /* Pods-DDTravel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = H49JVMRYS4;
+				INFOPLIST_FILE = DDTravel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongzheng.DDTravel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FA7A6781DD9F32900895D6C /* Build configuration list for PBXProject "DDTravel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FA7A6921DD9F32900895D6C /* Debug */,
+				7FA7A6931DD9F32900895D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FA7A6941DD9F32900895D6C /* Build configuration list for PBXNativeTarget "DDTravel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FA7A6951DD9F32900895D6C /* Debug */,
+				7FA7A6961DD9F32900895D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7FA7A6751DD9F32900895D6C /* Project object */;
+}

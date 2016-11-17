@@ -1,0 +1,6 @@
+framework module Pods_DDTravel {
+  umbrella header "Pods-DDTravel-umbrella.h"
+
+  export *
+  module * { export * }
+}
