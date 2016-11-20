@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		041C352E1DDE15F3000B8436 /* DDTravelEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C352D1DDE15F3000B8436 /* DDTravelEditViewController.m */; };
+		042AB4E11DE07399002A00E9 /* SF-UI-Display in Resources */ = {isa = PBXBuildFile; fileRef = 042AB4DF1DE07399002A00E9 /* SF-UI-Display */; };
+		042AB4E21DE07399002A00E9 /* SF-UI-Text in Resources */ = {isa = PBXBuildFile; fileRef = 042AB4E01DE07399002A00E9 /* SF-UI-Text */; };
 		0438DE771DDCE34D0098D21A /* FZLTHJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0438DE751DDCE34D0098D21A /* FZLTHJW.TTF */; };
 		0438DE781DDCE34D0098D21A /* FZLTXHJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0438DE761DDCE34D0098D21A /* FZLTXHJW.TTF */; };
 		0438DE7B1DDCE35B0098D21A /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438DE7A1DDCE35B0098D21A /* UIFont+CustomFont.m */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		041C352C1DDE15F3000B8436 /* DDTravelEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTravelEditViewController.h; sourceTree = "<group>"; };
 		041C352D1DDE15F3000B8436 /* DDTravelEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTravelEditViewController.m; sourceTree = "<group>"; };
+		042AB4DF1DE07399002A00E9 /* SF-UI-Display */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SF-UI-Display"; sourceTree = "<group>"; };
+		042AB4E01DE07399002A00E9 /* SF-UI-Text */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SF-UI-Text"; sourceTree = "<group>"; };
 		0438DE751DDCE34D0098D21A /* FZLTHJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZLTHJW.TTF; sourceTree = "<group>"; };
 		0438DE761DDCE34D0098D21A /* FZLTXHJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZLTXHJW.TTF; sourceTree = "<group>"; };
 		0438DE791DDCE35B0098D21A /* UIFont+CustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CustomFont.h"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 		7FA7A6801DD9F32900895D6C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				042AB4DF1DE07399002A00E9 /* SF-UI-Display */,
+				042AB4E01DE07399002A00E9 /* SF-UI-Text */,
 				0438DE751DDCE34D0098D21A /* FZLTHJW.TTF */,
 				0438DE761DDCE34D0098D21A /* FZLTXHJW.TTF */,
 				7FA7A6811DD9F32900895D6C /* main.m */,
@@ -226,7 +232,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042AB4E21DE07399002A00E9 /* SF-UI-Text in Resources */,
 				0438DE771DDCE34D0098D21A /* FZLTHJW.TTF in Resources */,
+				042AB4E11DE07399002A00E9 /* SF-UI-Display in Resources */,
 				7FA7A6901DD9F32900895D6C /* LaunchScreen.storyboard in Resources */,
 				7FA7A68D1DD9F32900895D6C /* Assets.xcassets in Resources */,
 				7FA7A68B1DD9F32900895D6C /* Main.storyboard in Resources */,

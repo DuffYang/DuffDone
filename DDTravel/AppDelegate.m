@@ -34,6 +34,7 @@
     DDHomeViewController *homeViewController = [[DDHomeViewController alloc] init];
     UINavigationController *homeNavController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     homeNavController.navigationBar.barTintColor = [UIColor color255WithRed:250 green:250 blue:250];
+    homeNavController.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:18]};
     self.window.rootViewController = homeNavController;
     [self.window makeKeyAndVisible];
 }

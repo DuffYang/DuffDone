@@ -81,9 +81,9 @@ static const CGFloat kDateLabelWidth = 124.f;
 #pragma mark -
 #pragma mark Public Methods
 - (void)reloadCellWithCouponDistributeData:(DDTravelListModel *)data {
-    self.nameLabel.text = data.nickname;
-    self.receiveTimeLabel.text = data.receiveTime;
-    self.usedTimeLabel.text = data.usedTime;
+    self.nameLabel.text = data.dateString;
+    self.receiveTimeLabel.text = data.startPoint;
+    self.usedTimeLabel.text = data.endPoint;
 }
 
 #pragma mark - Builder

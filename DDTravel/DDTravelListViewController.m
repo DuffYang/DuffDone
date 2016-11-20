@@ -61,6 +61,11 @@
     [self fetchDistributeListFromLocal];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self fetchDistributeListFromLocal];
+}
+
 - (void)viewWillLayoutSubviews {
     self.tableView.frame = CGRectMake(.0f, .0f, self.view.bounds.size.width, self.view.bounds.size.height);
 }
@@ -96,6 +101,17 @@
     self.dataSource = nil;
 }
 
+- (void)longPressToDo:(UILongPressGestureRecognizer *)gesture {
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        CGPoint point = [gesture locationInView:self.tableView];
+        NSIndexPath * indexPath = [self.tableView indexPathForRowAtPoint:point];
+        if(indexPath == nil) return ;
+        DDTravelListModel *model = [self.dataSource objectAtIndex:indexPath.row];
+        DDTravelEditViewController *editView = [[DDTravelEditViewController alloc] initWithModel:model];
+        [self.navigationController pushViewController:editView animated:YES];
+    }
+}
+
 #pragma mark - Builder
 - (void)buildTableView {
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -103,17 +119,29 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    UILongPressGestureRecognizer * longPressGr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressToDo:)];
+    longPressGr.minimumPressDuration = 1.0;
+    [self.tableView addGestureRecognizer:longPressGr];
     [self.view addSubview:self.tableView];
 }
 
 #pragma mark Reload
 - (void)fetchDistributeListFromLocal {
     NSMutableArray *data = [NSMutableArray array];
-    for (int i = 0; i < 20; i++) {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSArray *dataArray = [ud objectForKey:@"data"];
+    for (NSDictionary *info in dataArray) {
         DDTravelListModel *model = [[DDTravelListModel alloc] init];
-        model.nickname = @"11月15日 11:20";
-        model.receiveTime = @"朝阳区望京街10号望京SOHO";
-        model.usedTime = @"朝阳区康营中路康营家园17期";
+        model.keyID = [info objectForKey:@"keyID"];
+        model.dateString = [info objectForKey:@"dateString"];
+        model.startPoint = [info objectForKey:@"startPoint"];
+        model.endPoint = [info objectForKey:@"endPoint"];
+        model.avatarURL = [info objectForKey:@"avatarURL"];
+        model.owner = [info objectForKey:@"owner"];
+        model.carType = [info objectForKey:@"carType"];
+        model.commentScore = [info objectForKey:@"commentScore"];
+        model.orderCount = [info objectForKey:@"orderCount"];
+        model.price = [info objectForKey:@"price"];
         [data addObject:model];
     }
     self.dataSource = data;
@@ -141,7 +169,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DDTravelDetailViewController *travelDetail = [[DDTravelDetailViewController alloc] init];
+    DDTravelListModel *model = [self.dataSource objectAtIndex:indexPath.row];
+    DDTravelDetailViewController *travelDetail = [[DDTravelDetailViewController alloc] initWithModel:model];
     [self.navigationController pushViewController:travelDetail animated:YES];
 }
 

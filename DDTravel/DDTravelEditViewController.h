@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DDTravelListModel.h"
 
 @interface DDTravelEditViewController : UIViewController
+
+- (id)initWithModel:(DDTravelListModel *)model;
 
 @end

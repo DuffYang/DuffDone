@@ -10,11 +10,17 @@
 
 @interface DDTravelListModel : NSObject
 
-@property (nonatomic, strong) NSString *buyerUID;
-@property (nonatomic, strong) NSString *distributeID;
-@property (nonatomic, strong) NSString *nickname;
-@property (nonatomic, strong) NSString *receiveTime;
-@property (nonatomic, strong) NSString *usedTime;
-@property (nonatomic, strong) NSString *emID;
+@property (nonatomic, strong) NSString *keyID;
+
+@property (nonatomic, strong) NSString *avatarURL;
+@property (nonatomic, strong) NSString *owner;
+@property (nonatomic, strong) NSString *carType;
+@property (nonatomic, strong) NSString *commentScore;
+@property (nonatomic, strong) NSString *orderCount;
+@property (nonatomic, strong) NSString *price;
+
+@property (nonatomic, strong) NSString *startPoint;
+@property (nonatomic, strong) NSString *endPoint;
+@property (nonatomic, strong) NSString *dateString;
 
 @end

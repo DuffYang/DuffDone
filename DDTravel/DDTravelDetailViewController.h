@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "DDTravelListModel.h"
+
 @interface DDTravelDetailViewController : UIViewController
+
+- (id)initWithModel:(DDTravelListModel *)model;
 
 @end

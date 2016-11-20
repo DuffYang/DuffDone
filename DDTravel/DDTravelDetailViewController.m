@@ -11,6 +11,7 @@
 #import "UIViewController+Custom.h"
 #import "UIColor+RGBColor.h"
 #import "UIFont+CustomFont.h"
+#import "UIImageView+WebCache.h"
 
 static const CGFloat kPriceLabelHeight  = 60.f;
 static const CGFloat kOffset = 15.f;
@@ -24,22 +25,32 @@ static const CGFloat kCommentViewHeigth = 160.f;
 @interface DDTravelDetailViewController ()
 
 @property (nonatomic, strong) UIImageView *avatarImageView;
-@property (nonatomic, strong) UILabel *nameLabel;
-@property (nonatomic, strong) UILabel *receiveTimeLabel;
+@property (nonatomic, strong) UITextField *nameLabel;
+@property (nonatomic, strong) UITextField *receiveTimeLabel;
 
 @property (nonatomic, strong) UIImageView *fiveStarImageView;
-@property (nonatomic, strong) UILabel *scoreLabel;
-@property (nonatomic, strong) UILabel *usedTimeLabel;
+@property (nonatomic, strong) UITextField *scoreLabel;
+@property (nonatomic, strong) UITextField *usedTimeLabel;
 
 @property (nonatomic, strong) UIImageView *messageImageView;
 
 @property (nonatomic, strong) UIImageView *paySuccessImageView;
-@property (nonatomic, strong) UILabel *priceLabel;
+@property (nonatomic, strong) UITextField *priceLabel;
 @property (nonatomic, strong) UIImageView *commentView;
+
+@property (nonatomic, strong) DDTravelListModel *model;
 
 @end
 
 @implementation DDTravelDetailViewController
+
+- (id)initWithModel:(DDTravelListModel *)model {
+    self = [super init];
+    if (self) {
+        self.model = model;
+    }
+    return self;
+}
 
 - (void)loadView {
     [super loadView];
@@ -72,16 +83,21 @@ static const CGFloat kCommentViewHeigth = 160.f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:self.model.avatarURL]];
+    self.nameLabel.text = self.model.owner;
+    self.receiveTimeLabel.text = self.model.carType;
+    self.scoreLabel.text = self.model.commentScore;
+    self.usedTimeLabel.text = self.model.orderCount;
+    self.priceLabel.attributedText = [self getPrice:self.model.price];
+    self.scoreLabel.text = self.model.commentScore;
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
     CGFloat cellW = CGRectGetWidth(self.view.bounds);
-    CGFloat cellH = CGRectGetHeight(self.view.bounds);
 
-    
     self.avatarImageView.frame = CGRectMake(kOffset, kOffset, kImageHeight, kImageHeight);
     
     int leftLabelW = cellW - kProfileInfoHeight - kConnectImageWIdth;
@@ -105,6 +121,27 @@ static const CGFloat kCommentViewHeigth = 160.f;
 
 - (void)didClickRightButton:(id)sender {
     
+    
+    NSMutableArray *saveArray = [NSMutableArray arrayWithCapacity:0];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *dataArray = [NSMutableArray arrayWithArray:[ud objectForKey:@"data"]];
+    for (NSDictionary *info in dataArray) {
+        NSMutableDictionary *saveInfo = [NSMutableDictionary dictionaryWithDictionary:info];
+        NSString *keyID = [info objectForKey:@"keyID"];
+        if ([keyID isEqualToString:self.model.keyID]) {
+            [saveInfo setValue:self.nameLabel.text forKey:@"owner"];
+            [saveInfo setValue:self.receiveTimeLabel.text forKey:@"carType"];
+            [saveInfo setValue:self.scoreLabel.text forKey:@"commentScore"];
+            [saveInfo setValue:self.usedTimeLabel.text forKey:@"orderCount"];
+            [saveInfo setValue:[NSString stringWithFormat:@"%.2f", [self.priceLabel.text floatValue]] forKey:@"price"];
+        }
+        [saveArray addObject:saveInfo];
+    }
+    [ud setObject:saveArray forKey:@"data"];
+    [ud synchronize];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Builder
@@ -119,7 +156,7 @@ static const CGFloat kCommentViewHeigth = 160.f;
 - (void)buildNameLabel {
     self.nameLabel = [self buildCommonLabel];
     self.nameLabel.textColor = [UIColor blackColor];
-    self.nameLabel.text = @"宋师傅 · 京Q5GS79";
+    self.nameLabel.text = @"宋师傅 • 京Q5GS79";
     self.nameLabel.font = [UIFont systemFontOfSize:14.0f];
     [self.view addSubview:self.nameLabel];
 }
@@ -128,7 +165,7 @@ static const CGFloat kCommentViewHeigth = 160.f;
     self.receiveTimeLabel = [self buildCommonLabel];
     self.receiveTimeLabel.font = [UIFont systemFontOfSize:12.0f];
     self.receiveTimeLabel.textColor = [UIColor color255WithRed:104 green:104 blue:104];
-    self.receiveTimeLabel.text = @"黑色·丰田凯美瑞";
+    self.receiveTimeLabel.text = @"黑色 • 丰田凯美瑞";
     [self.view addSubview:self.receiveTimeLabel];
 }
 
@@ -158,8 +195,8 @@ static const CGFloat kCommentViewHeigth = 160.f;
     [self.view addSubview:self.usedTimeLabel];
 }
 
-- (UILabel *)buildCommonLabel {
-    UILabel *label = [[UILabel alloc] init];
+- (UITextField *)buildCommonLabel {
+    UITextField *label = [[UITextField alloc] init];
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor grayColorOnLightColorForContent];
     label.font = [UIFont systemFontOfSize:14.0f];
@@ -184,13 +221,23 @@ static const CGFloat kCommentViewHeigth = 160.f;
     self.priceLabel.backgroundColor = [UIColor whiteColor];
     self.priceLabel.textAlignment = NSTextAlignmentCenter;
     self.priceLabel.textColor = [UIColor blackColor];
-    self.priceLabel.attributedText = [self getPrice];
+    self.priceLabel.attributedText = [self getPrice:@"65.5"];
     [self.view addSubview:self.priceLabel];
 }
 
-- (NSAttributedString *)getPrice {
+- (NSAttributedString *)getPrice:(NSString *)price {
+    
+//    NSArray *familyNames = [UIFont familyNames];
+//    for( NSString *familyName in familyNames ){
+//        printf("Family: %s \n", [familyName UTF8String] );
+//        NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
+//        for( NSString *fontName in fontNames ){
+//            printf("\tFont: %s \n", [fontName UTF8String] );
+//        }
+//    }
+    
     NSMutableAttributedString *resultString = [[NSMutableAttributedString alloc] init];
-    NSAttributedString *priceString = [[NSAttributedString alloc] initWithString:@"65.5" attributes:@{NSFontAttributeName:[UIFont LTXHFontWithSize:40.f]}];
+    NSAttributedString *priceString = [[NSAttributedString alloc] initWithString:price attributes:@{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Thin" size:40.f]}];
     [resultString appendAttributedString:priceString];
     NSAttributedString *yuanString = [[NSAttributedString alloc] initWithString:@"元" attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.f]}];
     [resultString appendAttributedString:yuanString];
