@@ -128,7 +128,7 @@ static const CGFloat kLabelHeight = 40.f;
         NSMutableDictionary *dataInfo = [NSMutableDictionary dictionaryWithCapacity:0];
         [dataInfo setValue:keyID forKey:@"keyID"];
         [self setCarInfo:dataInfo];
-        [dataArray addObject:dataInfo];
+        [dataArray insertObject:dataInfo atIndex:0];
         [ud setObject:dataArray forKey:@"data"];
     }
     [ud synchronize];
@@ -150,7 +150,7 @@ static const CGFloat kLabelHeight = 40.f;
 #pragma mark - Builder
 - (void)buildDateLabel {
     self.dateLabel = [self buildCommonLabel];
-    self.dateLabel.text = @"11月15日 11:20";
+    self.dateLabel.text = @"11月15日 22:06";
     [self.view addSubview:self.dateLabel];
 }
 
@@ -198,7 +198,7 @@ static const CGFloat kLabelHeight = 40.f;
 
 - (void)buildPriceLabel {
     self.priceLabel = [self buildCommonLabel];
-    self.priceLabel.text = @"41.7";
+    self.priceLabel.text = @"58.6";
     [self.view addSubview:self.priceLabel];
 }
 
