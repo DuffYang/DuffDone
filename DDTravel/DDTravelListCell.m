@@ -22,8 +22,8 @@ static const CGFloat kDateLabelWidth = 124.f;
 
 @property (nonatomic, strong) UIImageView *locationImageView;
 
-@property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UIImageView *fastCarLogo;
+@property (nonatomic, strong) UILabel *dateLabel;
 @property (nonatomic, strong) UILabel *receiveTimeLabel;
 @property (nonatomic, strong) UILabel *usedTimeLabel;
 
@@ -58,20 +58,19 @@ static const CGFloat kDateLabelWidth = 124.f;
     CGFloat cellH = self.bounds.size.height;
     int OffsetY = (cellH - kLabelHeight * 3) / 2;
     int leftLabelW = cellW - 100;
-    self.nameLabel.frame = CGRectMake(kOffset, OffsetY, kDateLabelWidth, kLabelHeight);
-    self.fastCarLogo.frame = CGRectMake(kDateLabelWidth - 5, OffsetY + 1, 36, 22);
-    
-    self.locationImageView.frame = CGRectMake(0, CGRectGetMaxY(self.nameLabel.frame), kLocationIconWidth, kLabelHeight * 2);
-    self.receiveTimeLabel.frame = CGRectMake(kLocationIconWidth, CGRectGetMaxY(self.nameLabel.frame), leftLabelW, kLabelHeight);
+    self.fastCarLogo.frame = CGRectMake(kOffset, OffsetY, 36, 22);
+    self.dateLabel.frame = CGRectMake(kOffset, OffsetY + 22, kDateLabelWidth, kLabelHeight);
+    self.locationImageView.frame = CGRectMake(0, CGRectGetMaxY(self.dateLabel.frame), kLocationIconWidth, kLabelHeight * 2);
+    self.receiveTimeLabel.frame = CGRectMake(kLocationIconWidth, CGRectGetMaxY(self.dateLabel.frame), leftLabelW, kLabelHeight);
     self.usedTimeLabel.frame = CGRectMake(kLocationIconWidth,  CGRectGetMaxY(self.receiveTimeLabel.frame), leftLabelW, kLabelHeight);
     
-    self.finishLabel.frame = CGRectMake(cellW - kFinishLabelWidth,  OffsetY, kFinishLabelWidth, kLabelHeight);
-    self.sendMessageButton.frame = CGRectMake(cellW - 55,  (cellH - 25) / 2, 50, 25);
+    self.finishLabel.frame = CGRectMake(cellW - kFinishLabelWidth - 50,  OffsetY, kFinishLabelWidth, kLabelHeight);
+    self.sendMessageButton.frame = CGRectMake(CGRectGetMaxX(self.finishLabel.frame),  OffsetY, 50, 25);
     self.separatorLine.frame = CGRectMake(0, cellH - 0.5, cellW, 0.5);
 }
 
 - (void)dealloc {
-    self.nameLabel = nil;
+    self.dateLabel = nil;
     self.receiveTimeLabel = nil;
     self.usedTimeLabel = nil;
     self.sendMessageButton = nil;
@@ -81,17 +80,17 @@ static const CGFloat kDateLabelWidth = 124.f;
 #pragma mark -
 #pragma mark Public Methods
 - (void)reloadCellWithCouponDistributeData:(DDTravelListModel *)data {
-    self.nameLabel.text = data.dateString;
+    self.dateLabel.text = data.dateString;
     self.receiveTimeLabel.text = data.startPoint;
     self.usedTimeLabel.text = data.endPoint;
 }
 
 #pragma mark - Builder
 - (void)buildNameLabel {
-    self.nameLabel = [self buildCommonLabel];
-    self.nameLabel.font =[UIFont boldSystemFontOfSize:14.f];
-    self.nameLabel.textColor = [UIColor color255WithRed:84 green:84 blue:84];
-    [self addSubview:self.nameLabel];
+    self.dateLabel = [self buildCommonLabel];
+    self.dateLabel.font =[UIFont boldSystemFontOfSize:14.f];
+    self.dateLabel.textColor = [UIColor color255WithRed:84 green:84 blue:84];
+    [self addSubview:self.dateLabel];
 }
 
 - (void)buildFastCarLogo {

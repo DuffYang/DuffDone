@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "DDHomeViewController.h"
 #import "UIColor+RGBColor.h"
+#import "SDWebImageManager.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [[SDWebImageManager sharedManager].imageDownloader setValue: nil forHTTPHeaderField:@"Accept"];
     
     [self buildWindow];
     
