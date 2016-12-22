@@ -20,9 +20,9 @@ static const CGFloat kDateLabelWidth = 124.f;
 
 @interface DDTravelListCell ()
 
-@property (nonatomic, strong) UIImageView *locationImageView;
-
 @property (nonatomic, strong) UIImageView *fastCarLogo;
+
+@property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *dateLabel;
 @property (nonatomic, strong) UILabel *receiveTimeLabel;
 @property (nonatomic, strong) UILabel *usedTimeLabel;
@@ -40,9 +40,9 @@ static const CGFloat kDateLabelWidth = 124.f;
     self = [super initWithStyle: style reuseIdentifier: reuseIdentifier];
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self buildLocationImageView];
-        [self buildNameLabel];
         [self buildFastCarLogo];
+        [self buildNameLabel];
+        [self buildDateLabel];
         [self buildReceiveLabel];
         [self buildUsedTimeLabel];
         [self buildFinishLabel];
@@ -58,15 +58,17 @@ static const CGFloat kDateLabelWidth = 124.f;
     CGFloat cellH = self.bounds.size.height;
     int OffsetY = (cellH - kLabelHeight * 3) / 2;
     int leftLabelW = cellW - 100;
-    self.fastCarLogo.frame = CGRectMake(kOffset, OffsetY, 36, 22);
-    self.dateLabel.frame = CGRectMake(kOffset, OffsetY + 22, kDateLabelWidth, kLabelHeight);
-    self.locationImageView.frame = CGRectMake(0, CGRectGetMaxY(self.dateLabel.frame), kLocationIconWidth, kLabelHeight * 2);
-    self.receiveTimeLabel.frame = CGRectMake(kLocationIconWidth, CGRectGetMaxY(self.dateLabel.frame), leftLabelW, kLabelHeight);
-    self.usedTimeLabel.frame = CGRectMake(kLocationIconWidth,  CGRectGetMaxY(self.receiveTimeLabel.frame), leftLabelW, kLabelHeight);
     
-    self.finishLabel.frame = CGRectMake(cellW - kFinishLabelWidth - 50,  OffsetY, kFinishLabelWidth, kLabelHeight);
-    self.sendMessageButton.frame = CGRectMake(CGRectGetMaxX(self.finishLabel.frame),  OffsetY, 50, 25);
-    self.separatorLine.frame = CGRectMake(0, cellH - 0.5, cellW, 0.5);
+    self.fastCarLogo.frame = CGRectMake(0, 37, 31, 100);
+    
+    self.nameLabel.frame = CGRectMake(31, 19, kDateLabelWidth, 14);
+    self.dateLabel.frame = CGRectMake(31, 37 + 5, kDateLabelWidth, kLabelHeight);
+    self.receiveTimeLabel.frame = CGRectMake(31, CGRectGetMaxY(self.dateLabel.frame) + 2, leftLabelW, kLabelHeight);
+    self.usedTimeLabel.frame = CGRectMake(31,  CGRectGetMaxY(self.receiveTimeLabel.frame) + 2, leftLabelW, kLabelHeight);
+    
+    self.finishLabel.frame = CGRectMake(cellW - 72,  19, 45, 14);
+    self.sendMessageButton.frame = CGRectMake(CGRectGetMaxX(self.finishLabel.frame), 19, 14, 14);
+    self.separatorLine.frame = CGRectMake(0, cellH - 5, cellW, 5);
 }
 
 - (void)dealloc {
@@ -87,22 +89,21 @@ static const CGFloat kDateLabelWidth = 124.f;
 
 #pragma mark - Builder
 - (void)buildNameLabel {
+    self.nameLabel = [self buildCommonLabel];
+    self.nameLabel.text = @"专车";
+    self.nameLabel.textColor = [UIColor color255WithRed:51 green:51 blue:51];
+    [self addSubview:self.nameLabel];
+}
+
+- (void)buildDateLabel {
     self.dateLabel = [self buildCommonLabel];
-    self.dateLabel.font =[UIFont boldSystemFontOfSize:14.f];
-    self.dateLabel.textColor = [UIColor color255WithRed:84 green:84 blue:84];
     [self addSubview:self.dateLabel];
 }
 
 - (void)buildFastCarLogo {
     self.fastCarLogo = [[UIImageView alloc] init];
-    self.fastCarLogo.image = [UIImage imageNamed:@"fast_car_logo"];
+    self.fastCarLogo.image = [UIImage imageNamed:@"travel_list_image"];
     [self addSubview:self.fastCarLogo];
-}
-
-- (void)buildLocationImageView {
-    self.locationImageView = [[UIImageView alloc] init];
-    self.locationImageView.image = [UIImage imageNamed:@"location_icon"];
-    [self addSubview:self.locationImageView];
 }
 
 - (void)buildReceiveLabel {
@@ -118,6 +119,7 @@ static const CGFloat kDateLabelWidth = 124.f;
 - (void)buildFinishLabel {
     self.finishLabel = [self buildCommonLabel];
     self.finishLabel.textAlignment = NSTextAlignmentCenter;
+    self.finishLabel.textColor = [UIColor color255WithRed:153 green:153 blue:153];
     self.finishLabel.text = @"已完成";
     [self addSubview:self.finishLabel];
 }
@@ -133,7 +135,7 @@ static const CGFloat kDateLabelWidth = 124.f;
 
 - (void)buildSeparatorLine {
     self.separatorLine = [[UIImageView alloc] init];
-    self.separatorLine.backgroundColor = [UIColor whiteColorForAllLineColor];
+    self.separatorLine.backgroundColor = [UIColor whiteColorForDefaultBackgroundColor];
     [self addSubview:self.separatorLine];
 }
 

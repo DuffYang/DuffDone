@@ -10,6 +10,8 @@
 #import "DDTravelDetailViewController.h"
 #import "DDTravelEditViewController.h"
 
+#import "DDTravelListHeader.h"
+
 #import "UIViewController+Custom.h"
 
 #import "DDTravelListCell.h"
@@ -22,6 +24,8 @@
 @interface DDTravelListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) DDTravelListHeader *headerView;
+
 @property (nonatomic, strong) UIButton *confirmButton;
 
 @property (nonatomic, strong) NSArray *dataSource;
@@ -46,8 +50,9 @@
     
     [self setCustomBackgroundColor];
     [self setCustomNavigationBackItem];
-    [self setCustomNavigationRightButton:@"编辑" action:@selector(didClickRightButton:)];
+    [self setCustomNavigationRightButton:@"开发票" action:@selector(didClickRightButton:)];
     [self buildTableView];
+    [self buildHeaderView];
 }
 
 - (void)didClickRightButton:(id)sender {
@@ -58,6 +63,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的行程";
+    self.view.backgroundColor = [UIColor whiteColorForDefaultBackgroundColor];
+    
     [self fetchDistributeListFromLocal];
 }
 
@@ -67,7 +74,11 @@
 }
 
 - (void)viewWillLayoutSubviews {
-    self.tableView.frame = CGRectMake(.0f, .0f, self.view.bounds.size.width, self.view.bounds.size.height);
+    [super viewWillLayoutSubviews];
+    
+    CGFloat width = CGRectGetWidth(self.view.bounds);
+    
+    self.tableView.frame = CGRectMake(10, .0f, width - 20, self.view.bounds.size.height);
 }
 
 - (void)viewWillDealloc {
@@ -112,19 +123,6 @@
     }
 }
 
-#pragma mark - Builder
-- (void)buildTableView {
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    UILongPressGestureRecognizer * longPressGr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressToDo:)];
-    longPressGr.minimumPressDuration = 1.0;
-    [self.tableView addGestureRecognizer:longPressGr];
-    [self.view addSubview:self.tableView];
-}
-
 #pragma mark Reload
 - (void)fetchDistributeListFromLocal {
     NSMutableArray *data = [NSMutableArray array];
@@ -142,6 +140,7 @@
         model.commentScore = [info objectForKey:@"commentScore"];
         model.orderCount = [info objectForKey:@"orderCount"];
         model.price = [info objectForKey:@"price"];
+        model.paiziString = [info objectForKey:@"paizi"];
         [data addObject:model];
     }
     self.dataSource = data;
@@ -165,7 +164,7 @@
 
 #pragma mark UITableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 150.f;
+    return 137 + 5;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -174,5 +173,24 @@
     [self.navigationController pushViewController:travelDetail animated:YES];
 }
 
+#pragma mark - Builder
+- (void)buildTableView {
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    UILongPressGestureRecognizer * longPressGr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressToDo:)];
+    longPressGr.minimumPressDuration = 1.0;
+    [self.tableView addGestureRecognizer:longPressGr];
+    [self.view addSubview:self.tableView];
+}
+
+- (void)buildHeaderView {
+    CGFloat width = CGRectGetWidth(self.view.bounds);
+    self.headerView = [DDTravelListHeader new];
+    self.headerView.frame = CGRectMake(0, 0, width, 39);
+    self.tableView.tableHeaderView = self.headerView;
+}
 
 @end

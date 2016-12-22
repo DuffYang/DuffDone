@@ -13,6 +13,8 @@
 		0438DE771DDCE34D0098D21A /* FZLTHJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0438DE751DDCE34D0098D21A /* FZLTHJW.TTF */; };
 		0438DE781DDCE34D0098D21A /* FZLTXHJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0438DE761DDCE34D0098D21A /* FZLTXHJW.TTF */; };
 		0438DE7B1DDCE35B0098D21A /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438DE7A1DDCE35B0098D21A /* UIFont+CustomFont.m */; };
+		045150C11E0C213A00752B11 /* DDTravelListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 045150C01E0C213A00752B11 /* DDTravelListHeader.m */; };
+		045150C41E0C355200752B11 /* DDDriverInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045150C31E0C355200752B11 /* DDDriverInfoView.m */; };
 		7FA7A6821DD9F32900895D6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6811DD9F32900895D6C /* main.m */; };
 		7FA7A6851DD9F32900895D6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6841DD9F32900895D6C /* AppDelegate.m */; };
 		7FA7A6881DD9F32900895D6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7A6871DD9F32900895D6C /* ViewController.m */; };
@@ -40,6 +42,10 @@
 		0438DE761DDCE34D0098D21A /* FZLTXHJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZLTXHJW.TTF; sourceTree = "<group>"; };
 		0438DE791DDCE35B0098D21A /* UIFont+CustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CustomFont.h"; sourceTree = "<group>"; };
 		0438DE7A1DDCE35B0098D21A /* UIFont+CustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CustomFont.m"; sourceTree = "<group>"; };
+		045150BF1E0C213A00752B11 /* DDTravelListHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTravelListHeader.h; sourceTree = "<group>"; };
+		045150C01E0C213A00752B11 /* DDTravelListHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTravelListHeader.m; sourceTree = "<group>"; };
+		045150C21E0C355200752B11 /* DDDriverInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDriverInfoView.h; sourceTree = "<group>"; };
+		045150C31E0C355200752B11 /* DDDriverInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDriverInfoView.m; sourceTree = "<group>"; };
 		7FA7A67D1DD9F32900895D6C /* DDTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA7A6811DD9F32900895D6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FA7A6831DD9F32900895D6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +151,10 @@
 				7FA7A6B01DDABDF800895D6C /* DDTravelDetailViewController.m */,
 				041C352C1DDE15F3000B8436 /* DDTravelEditViewController.h */,
 				041C352D1DDE15F3000B8436 /* DDTravelEditViewController.m */,
+				045150BF1E0C213A00752B11 /* DDTravelListHeader.h */,
+				045150C01E0C213A00752B11 /* DDTravelListHeader.m */,
+				045150C21E0C355200752B11 /* DDDriverInfoView.h */,
+				045150C31E0C355200752B11 /* DDDriverInfoView.m */,
 			);
 			path = DDTravel;
 			sourceTree = "<group>";
@@ -302,8 +312,10 @@
 				7FA7A6AE1DDAB81700895D6C /* DDTravelListModel.m in Sources */,
 				7FA7A6881DD9F32900895D6C /* ViewController.m in Sources */,
 				7FA7A6991DD9F35500895D6C /* DDHomeViewController.m in Sources */,
+				045150C11E0C213A00752B11 /* DDTravelListHeader.m in Sources */,
 				7FA7A6AB1DDAB80100895D6C /* DDTravelListCell.m in Sources */,
 				7FA7A6851DD9F32900895D6C /* AppDelegate.m in Sources */,
+				045150C41E0C355200752B11 /* DDDriverInfoView.m in Sources */,
 				7FA7A6A81DDAB56C00895D6C /* UIButton+OFHover.m in Sources */,
 				7FA7A6A21DDAB49700895D6C /* UIViewController+Custom.m in Sources */,
 				7FA7A6821DD9F32900895D6C /* main.m in Sources */,

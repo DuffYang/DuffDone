@@ -30,6 +30,8 @@ static const CGFloat kLabelHeight = 40.f;
 
 @property (nonatomic, strong) UITextField *priceLabel;
 
+@property (nonatomic, strong) UITextField *paiziLabel;
+
 @property (nonatomic, strong) DDTravelListModel *model;
 @property (nonatomic, assign) BOOL editModel;
 
@@ -72,6 +74,8 @@ static const CGFloat kLabelHeight = 40.f;
     [self buildUsedTimeLabel];
     
     [self buildPriceLabel];
+    
+    [self buildPaiziLabel];
 }
 
 - (void)viewDidLoad {
@@ -88,6 +92,7 @@ static const CGFloat kLabelHeight = 40.f;
         self.usedTimeLabel.text = self.model.orderCount;
         self.priceLabel.text = self.model.price;
         self.scoreLabel.text = self.model.commentScore;
+        self.paiziLabel.text = self.model.paiziString;
     }
 }
 
@@ -105,6 +110,7 @@ static const CGFloat kLabelHeight = 40.f;
     self.scoreLabel.frame = CGRectMake(kOffset, CGRectGetMaxY(self.receiveTimeLabel.frame), cellW - kOffset * 2, kLabelHeight);
     self.usedTimeLabel.frame = CGRectMake(kOffset, CGRectGetMaxY(self.scoreLabel.frame), cellW - kOffset * 2, kLabelHeight);
     self.priceLabel.frame = CGRectMake(kOffset, CGRectGetMaxY(self.usedTimeLabel.frame), cellW - kOffset * 2, kLabelHeight);
+    self.paiziLabel.frame = CGRectMake(kOffset, CGRectGetMaxY(self.priceLabel.frame), cellW - kOffset * 2, kLabelHeight);
 }
 
 - (void)didClickRightButton:(id)sender {
@@ -145,6 +151,7 @@ static const CGFloat kLabelHeight = 40.f;
     [dataInfo setValue:self.scoreLabel.text forKey:@"commentScore"];
     [dataInfo setValue:self.usedTimeLabel.text forKey:@"orderCount"];
     [dataInfo setValue:self.priceLabel.text forKey:@"price"];
+    [dataInfo setValue:self.paiziLabel.text forKey:@"paizi"];
 }
 
 #pragma mark - Builder
@@ -174,7 +181,7 @@ static const CGFloat kLabelHeight = 40.f;
 
 - (void)buildNameLabel {
     self.nameLabel = [self buildCommonLabel];
-    self.nameLabel.text = @"宋师傅 • 京Q5GS79";
+    self.nameLabel.text = @"宋师傅 ";
     [self.view addSubview:self.nameLabel];
 }
 
@@ -201,6 +208,13 @@ static const CGFloat kLabelHeight = 40.f;
     self.priceLabel.text = @"58.6";
     [self.view addSubview:self.priceLabel];
 }
+
+- (void)buildPaiziLabel {
+    self.paiziLabel = [self buildCommonLabel];
+    self.paiziLabel.text = @"京Q5GS79";
+    [self.view addSubview:self.paiziLabel];
+}
+
 
 - (UITextField *)buildCommonLabel {
     UITextField *label = [[UITextField alloc] init];

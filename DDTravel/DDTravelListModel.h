@@ -23,4 +23,6 @@
 @property (nonatomic, strong) NSString *endPoint;
 @property (nonatomic, strong) NSString *dateString;
 
+@property (nonatomic, strong) NSString *paiziString;
+
 @end
